@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador VisuAlg Mobile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <h1>Simulador VisuAlg Mobile</h1>
+  </header>
+
+  <main class="app-container">
+    <div class="toolbar">
+      <button id="btn-run" class="btn btn-primary" onclick="executarAlgoritmo()">
+        ▶ Executar
+      </button>
+      <button id="btn-clear" class="btn btn-secondary" onclick="limparConsole()">
+        Limpar
+      </button>
+    </div>
+
+    <div class="editor-section">
+      <label for="code" class="section-label">Código Fonte (.alg)</label>
+      <textarea id="code" spellcheck="false" autocomplete="off" placeholder="Digite seu código VisuAlg aqui...">
+algoritmo "ExemploCompleto"
+var
+   idade : inteiro
+   nome : caractere
+inicio
+   escreval("Digite seu nome:")
+   leia(nome)
+   escreval("Digite sua idade:")
+   leia(idade)
+   
+   escreval("Olá, ", nome)
+   
+   se idade >= 18 entao
+      escreval("Você é maior de idade!")
+   senao
+      escreval("Você é menor de idade!")
+   fimse
+fimalgoritmo
+      </textarea>
+    </div>
+
+    <div class="console-section">
+      <div class="console-header">
+        <span>Terminal de Saída</span>
+      </div>
+      <div id="console" class="console-body"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
